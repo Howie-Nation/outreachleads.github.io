@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>[Your Agency Name] — B2B Lead Generation</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f13;
+      color: #e8e8f0;
+      line-height: 1.7;
+    }
+
+    nav {
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1e1e2e;
+    }
+
+    .logo {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-cta {
+      background: #2b5ce6;
+      color: white;
+      padding: 10px 22px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .nav-cta:hover { background: #1e4fd8; }
+
+    .hero {
+      max-width: 760px;
+      margin: 100px auto;
+      padding: 0 24px;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      background: #1a1a2e;
+      border: 1px solid #2b5ce6;
+      color: #7aa2f7;
+      padding: 6px 16px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      margin-bottom: 28px;
+      letter-spacing: 0.5px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      font-weight: 800;
+      line-height: 1.15;
+      color: #ffffff;
+      margin-bottom: 24px;
+      letter-spacing: -1px;
+    }
+
+    h1 span { color: #2b5ce6; }
+
+    .subtitle {
+      font-size: 1.15rem;
+      color: #9999bb;
+      max-width: 560px;
+      margin: 0 auto 40px;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: #2b5ce6;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      transition: background 0.2s;
+    }
+
+    .btn-primary:hover { background: #1e4fd8; }
+
+    .btn-secondary {
+      background: transparent;
+      color: #e8e8f0;
+      padding: 14px 32px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1rem;
+      border: 1px solid #2e2e4e;
+      transition: border-color 0.2s;
+    }
+
+    .btn-secondary:hover { border-color: #2b5ce6; }
+
+    .social-proof {
+      margin-top: 60px;
+      color: #555577;
+      font-size: 0.85rem;
+    }
+
+    .how {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+
+    .section-label {
+      text-align: center;
+      color: #2b5ce6;
+      font-size: 0.85rem;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 56px;
+      letter-spacing: -0.5px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+
+    .step {
+      background: #13131f;
+      border: 1px solid #1e1e2e;
+      border-radius: 12px;
+      padding: 32px 28px;
+      transition: border-color 0.2s;
+    }
+
+    .step:hover { border-color: #2b5ce6; }
+
+    .step-num {
+      background: #2b5ce6;
+      color: white;
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .step h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .step p {
+      font-size: 0.9rem;
+      color: #7777aa;
+      line-height: 1.6;
+    }
+
+    .pricing {
+      max-width: 900px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+
+    .plans {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      margin-top: 48px;
+    }
+
+    .plan {
+      background: #13131f;
+      border: 1px solid #1e1e2e;
+      border-radius: 12px;
+      padding: 36px 28px;
+      position: relative;
+    }
+
+    .plan.featured {
+      border-color: #2b5ce6;
+      background: #111827;
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #2b5ce6;
+      color: white;
+      padding: 4px 16px;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .plan-name {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #7aa2f7;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 12px;
+    }
+
+    .plan-price {
+      font-size: 2.8rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .plan-price span {
+      font-size: 1rem;
+      color: #555577;
+      font-weight: 400;
+    }
+
+    .plan-desc {
+      font-size: 0.85rem;
+      color: #555577;
+      margin-bottom: 28px;
+      margin-top: 8px;
+    }
+
+    .plan-features {
+      list-style: none;
+      margin-bottom: 32px;
+    }
+
+    .plan-features li {
+      font-size: 0.9rem;
+      color: #9999bb;
+      padding: 8px 0;
+      border-bottom: 1px solid #1e1e2e;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .plan-features li::before {
+      content: "✓";
+      color: #2b5ce6;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .plan-cta {
+      display: block;
+      text-align: center;
+      padding: 13px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .plan.featured .plan-cta {
+      background: #2b5ce6;
+      color: white;
+    }
+
+    .plan.featured .plan-cta:hover { background: #1e4fd8; }
+
+    .plan:not(.featured) .plan-cta {
+      border: 1px solid #2e2e4e;
+      color: #e8e8f0;
+    }
+
+    .plan:not(.featured) .plan-cta:hover { border-color: #2b5ce6; }
+
+    .trial-note {
+      text-align: center;
+      margin-top: 28px;
+      font-size: 0.9rem;
+      color: #555577;
+    }
+
+    .trial-note strong { color: #7aa2f7; }
+
+    .faq {
+      max-width: 680px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid #1e1e2e;
+      padding: 24px 0;
+    }
+
+    .faq-item h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 10px;
+    }
+
+    .faq-item p {
+      font-size: 0.9rem;
+      color: #7777aa;
+      line-height: 1.7;
+    }
+
+    .final-cta {
+      max-width: 600px;
+      margin: 80px auto;
+      padding: 60px 24px;
+      text-align: center;
+      background: #13131f;
+      border: 1px solid #1e1e2e;
+      border-radius: 16px;
+    }
+
+    .final-cta h2 { margin-bottom: 16px; font-size: 1.8rem; }
+
+    .final-cta p {
+      color: #7777aa;
+      margin-bottom: 32px;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 24px;
+      border-top: 1px solid #1e1e2e;
+      color: #333355;
+      font-size: 0.82rem;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      nav { padding: 20px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">[Agency Name]</div>
+    <a href="#apply" class="nav-cta">Start Free Trial</a>
+  </nav>
+
+  <section class="hero">
+    <div class="badge">✦ FULLY DONE FOR YOU</div>
+    <h1>More Customers for Your <span>B2B Business</span> on Autopilot</h1>
+    <p class="subtitle">
+      We find verified leads matching your ideal customer and handle
+      all the outreach. You only talk to people who are already interested.
+    </p>
+    <div class="cta-group">
+      <a href="#apply" class="btn-primary">Start Free Trial →</a>
+      <a href="#how" class="btn-secondary">See How It Works</a>
+    </div>
+    <p class="social-proof">No calls. No contracts. Cancel anytime.</p>
+  </section>
+
+  <section class="how" id="how">
+    <p class="section-label">The Process</p>
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>You Tell Us Your Ideal Customer</h3>
+        <p>Fill out a short form describing who you want to reach — industry, company size, location, job title.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>We Build and Run Your Campaign</h3>
+        <p>We source verified contacts, write personalized outreach, and send everything on your behalf.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>You Receive Warm Leads</h3>
+        <p>When a prospect replies with interest we forward it directly to you. You close the deal your way.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing" id="pricing">
+    <p class="section-label">Pricing</p>
+    <h2>Simple, Transparent Plans</h2>
+    <div class="plans">
+
+      <div class="plan">
+        <div class="plan-name">Starter</div>
+        <div class="plan-price">$249<span>/mo</span></div>
+        <div class="plan-desc">Best for small local businesses</div>
+        <ul class="plan-features">
+          <li>25 verified leads per week</li>
+          <li>Full 3-email outreach sequence</li>
+          <li>Weekly performance report</li>
+          <li>Hot lead notifications</li>
+          <li>Live lead Google Sheet access</li>
+        </ul>
+        <a href="#apply" class="plan-cta">Start Free Trial</a>
+      </div>
+
+      <div class="plan featured">
+        <div class="popular-badge">Most Popular</div>
+        <div class="plan-name">Growth</div>
+        <div class="plan-price">$449<span>/mo</span></div>
+        <div class="plan-desc">Best for businesses ready to scale</div>
+        <ul class="plan-features">
+          <li>50 verified leads per week</li>
+          <li>Full 3-email outreach sequence</li>
+          <li>Weekly performance report</li>
+          <li>Hot leads with suggested replies</li>
+          <li>Live lead Google Sheet access</li>
+          <li>Monthly Loom campaign review</li>
+        </ul>
+        <a href="#apply" class="plan-cta">Start Free Trial</a>
+      </div>
+
+      <div class="plan">
+        <div class="plan-name">Scale</div>
+        <div class="plan-price">$699<span>/mo</span></div>
+        <div class="plan-desc">Best for high-volume pipelines</div>
+        <ul class="plan-features">
+          <li>100 verified leads per week</li>
+          <li>Full 3-email outreach sequence</li>
+          <li>A/B tested subject lines</li>
+          <li>Hot leads with suggested replies</li>
+          <li>Live lead Google Sheet access</li>
+          <li>Monthly Loom campaign review</li>
+          <li>Sequence refresh every 60 days</li>
+        </ul>
+        <a href="#apply" class="plan-cta">Start Free Trial</a>
+      </div>
+
+    </div>
+    <p class="trial-note">
+      All plans include a <strong>free 2-week trial</strong>.
+      You keep the leads regardless of whether you continue.
+    </p>
+  </section>
+
+  <section class="faq" id="faq">
+    <p class="section-label">FAQ</p>
+    <h2>Common Questions</h2>
+
+    <div class="faq-item">
+      <h3>How does the free trial work?</h3>
+      <p>We set up your campaign and run it for two weeks at no cost. You receive verified leads and outreach is sent on your behalf. At the end of the trial you decide whether to continue — no pressure either way. You keep all leads delivered during the trial.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do I need to give you access to my email?</h3>
+      <p>No. We set up a dedicated outreach inbox on your behalf so your main domain stays completely protected. Interested replies forward directly to your real inbox automatically.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Do you guarantee results?</h3>
+      <p>We guarantee delivery — verified leads sourced and outreach sent every week. Reply rates depend on your offer and market. Industry average for targeted cold outreach is 2–5% positive replies, which we aim to meet or exceed.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I communicate with you?</h3>
+      <p>Everything is handled over email. No calls required. We keep things efficient and fully documented for both sides.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I cancel anytime?</h3>
+      <p>Yes. Cancel with 14 days written notice via email. No long-term contracts.</p>
+    </div>
+
+  </section>
+
+  <section class="final-cta" id="apply">
+    <h2>Start Your Free Trial</h2>
+    <p>Fill out the form below and we will get your campaign set up within 48 hours.</p>
+    <a href="YOUR_TALLY_FORM_LINK_HERE" class="btn-primary">Apply Now — It's Free →</a>
+  </section>
+
+  <footer>
+    © 2026 [Agency Name] · [youragency.me] · All outreach complies with CAN-SPAM
+  </footer>
+
+</body>
+</html>
